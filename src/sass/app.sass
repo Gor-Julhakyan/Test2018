@@ -1,0 +1,544 @@
+@import variables
+@import fonts
+
+
+*
+  transition: all .3s ease-in-out
+
+body
+  margin: 0 !important;
+  // overflow: hidden
+
+a
+  text-decoration: none
+
+
+.header
+  width: 100%
+  
+.main-menu
+  // width: 100%
+  display: flex
+  align-items: center
+  padding: 18px 40px 16px 40px
+  box-sizing: border-box
+  @media only screen and (max-width: $phone)
+    padding: 5px
+  .logo
+    margin-right: 28px
+    @media only screen and (max-width: $phone)
+      width: 100px
+      margin-right: 5px
+      img
+        width: 100%
+  .header-navigation
+    @media only screen and (max-width: $tablet)
+      display: none
+  .nav-item
+    color: $primary-color
+    font-family: $primary-font
+    font-size: 14px
+    margin: 9px
+  .right-section
+    display: flex
+    align-items: center
+    margin-left: auto
+    padding: 0 10px
+    .compare
+      position: relative
+      @media only screen and (max-width: $tablet)
+        display: none
+      .count
+        width: 16px
+        height: 16px
+        display: flex
+        justify-content: center
+        align-items: center
+        position: absolute
+        top: -10px
+        left: 10px
+        font-family: "vida31pro"
+        font-size: 11px
+        color: #ffffff
+        background: #893b67
+        border-radius: 50%
+    .cabinet
+      background: none
+      border: 1px solid #ddddde
+      border-radius: 15px
+      color: #53565a
+      width: 150px
+      margin: 0 12px
+      padding: 4px
+      font-family: $primary-font
+      font-size: 14px
+      @media only screen and (max-width: $tablet)
+        display: none
+      i
+        margin-left: 10px
+        margin-right: -10px
+    .company-phone
+      display: flex
+      align-items: center
+      .number
+        font-family: $header-font
+        font-size: 18px
+        font-weight: bold
+        color: #565f66
+        margin: 0 10px
+        @media only screen and (max-width: $phone)
+          font-size: 14px
+      .call-btn
+        min-width: 46px
+        min-height: 46px
+        padding: 2px
+        background: #893b67
+        background-image: url(/assets/img/call-us-btn.png)
+        border-radius: 50%
+        background-position: center
+        background-size: 50%
+        background-repeat: no-repeat
+        background-clip: content-box
+        border: 6px solid #893b67
+        border-style: double
+        @media only screen and (max-width: $phone)
+          min-width: 38px
+          min-height: 38px
+    .mobile-nav-btn-open
+      display: none
+      @media only screen and (max-width: $tablet)
+        display: block
+        background: transparent
+        border: none
+        padding: 0
+        margin-left: 30px
+        i
+          font-size: 28px
+          color: $primary-color
+    .mobile-nav-btn-close
+      display: none
+
+
+      
+      
+.header-poster
+  width: 100%
+  height: 232px
+  display: flex
+  flex-direction: column
+  justify-content: flex-end
+  background-image: url(/assets/img/header-poster.jpg)
+  padding: 0 92px
+  box-sizing: border-box
+  @media only screen and (max-width: $phone)
+    padding: 0 20px
+  .obj-addres
+    width: 90px
+    background: #ffffff
+    font-family: $header-font
+    font-size: 18px
+    color: #777b80
+    padding: 15px 20px
+    padding-bottom: 0px
+    line-height: 13px
+    
+  .obj-name
+    width: 300px
+    height: 52px
+    background: #ffffff
+    font-family: $header-font
+    font-size: 48px
+    color: #414141
+    padding: 10px 20px
+    padding-bottom: 0
+
+.content-container
+  display: flex 
+  flex-wrap: wrap 
+  flex-direction: row 
+  justify-content: flex-start 
+  align-items: stretch
+  padding: 40px
+  padding-bottom: 70px
+  @media only screen and (max-width: $tablet)
+    flex-direction: column
+
+
+.sidebar
+  flex-basis: 30%
+  order: 1
+  position: relative
+  @media only screen and (max-width: $tablet)
+    width: 100%
+  &:before
+    content : ""
+    position: absolute
+    left: 0
+    top: 5%
+    height: 1px
+    width: 100%
+    height: 90%
+    border-right: 1px solid #f4f4f4
+    @media only screen and (max-width: $tablet)
+      display: none
+
+.sidebar-nav
+  list-style-type: none
+  margin-bottom: 10px
+  @media only screen and (max-width: $tablet)
+    display: none
+  li
+    padding: 18px
+    margin: 0 18px
+    .nav-item
+      font-family: $primary-font
+      font-size: 16px
+      color: $primary-color
+
+.notes
+  position: relative
+  margin: 0 50px
+  @media only screen and (max-width: $tablet)
+    margin: 0
+  .note-btn
+    width: 280px      
+    font-family: $primary-font
+    font-size: 16px
+    color: #53565a
+    background: transparent
+    text-align: left
+    padding: 10px
+    padding: 10px 25px
+    border: 1px solid #dddddd
+    border-radius: 20px
+    @media only screen and (max-width: $tablet)
+      width: 100%
+
+  .note-count
+    width: 20px
+    height: 20px
+    display: flex
+    justify-content: center
+    align-items: center
+    position: absolute
+    right: 18px
+    top: -5px
+    font-family: $header-font
+    font-size: 13px
+    color: #ffffff
+    background: $primary-color
+    border-radius: 50%;
+    @media only screen and (max-width: $tablet)
+      left: 120px
+
+.cards
+  display: flex
+  flex-direction: column
+  @media only screen and (max-width: $tablet)
+    flex-direction: row
+    justify-content: center  
+  .addres-card
+    position: relative
+    margin: 20px 28px 40px 76px
+    border-top: 1px solid #f1f1f1
+    padding-top: 15px
+    @media only screen and (max-width: $tablet)
+      width: 50%
+    .title
+      font-family: $header-font
+      font-size: 24px
+      color: $primary-color
+      margin-bottom: -3px
+    .subtitle
+      font-family: $primary-font
+      font-size: 16px
+      color: #000000
+    .action
+      font-family: $header-font
+      font-size: 14px
+      color: $primary-color
+      position: absolute
+      right: 0
+      bottom: 0
+      i
+        border: 2px solid #893b67
+        border-radius: 50%
+        width: 14px
+        height: 14px
+        margin: auto
+        text-align: center
+        margin-left: 8px
+
+  
+.notes-content
+  flex-basis: 70%
+  order: 2
+  @media only screen and (max-width: $tablet)
+    flex-basis: 100%
+
+.articles-title
+  font-family: $header-font
+  font-size: 36px
+  color: #414141
+  margin: 20px 40px
+  @media only screen and (max-width: $tablet)
+    margin: 20px 10px
+
+.note
+  padding: 6px 20px
+  margin: 32px 40px
+  border: 1px solid #edeeee
+  border-radius: 10px
+  position: relative
+  @media only screen and (max-width: $tablet)
+    margin: 32px 10px
+  .date
+    font-family: $primary-font
+    font-size: 16px
+    color: #000000
+    background: #edeeee
+    width: fit-content
+    padding: 3px 5px
+    margin: 12px 0
+  .content
+    font-family: $primary-font
+    font-size: 16px
+    color: #5a5a58
+  .title-action
+    display: flex
+    justify-content: space-between
+    align-items: center
+    .title
+      font-family: $header-font
+      font-size: 18px
+      color: #000000
+    .action
+      border-radius: 50%
+      width: 21px
+      height: 21px
+      min-width: 21px
+      min-height: 21px
+      text-align: center
+      margin: 10px
+      font-size: 21px
+      transition: all .3s ease-in-out
+    .close
+      border: 2px solid #a3a3a3
+      color: #a3a3a3
+      background: transparentize
+    .open
+      transform: rotate(180deg)
+      border: 2px solid $primary-color
+      color: #ffffff
+      background: $primary-color
+
+.events-section
+  width: 100%
+  display: flex
+  background: #edeeee
+  padding: 0 100px
+  margin: 8px 0
+  max-height: 155px
+  box-sizing: border-box
+  position: relative
+  @media only screen and (max-width: $tablet)
+    padding: 0
+    overflow: auto
+  .event-container
+    display: flex
+    flex-direction: column
+    width: 25%
+    padding: 50px
+    box-sizing: border-box
+    @media only screen and (max-width: $tablet)
+      min-width: 33%
+    @media only screen and (max-width: $phone)
+      min-width: 100%
+      &:not(:first-child)
+        display: none
+    .event-header
+      display: flex
+      align-items: center
+      .date
+        font-family: $primary-font
+        font-size: 14px
+        color: #000000
+      .type
+        font-family: $primary-font
+        font-size: 10px
+        color: #000000
+        text-transform: uppercase
+        padding: 3px
+        margin: 0 5px
+        background: #ffffff
+      .top
+        background: #c5e71b      
+    .event-description
+      font-family: $primary-font
+      font-size: 14px
+      color: #000000
+
+.pagination-circle
+  display: none
+  @media only screen and (max-width: $phone)
+    display: inline-block
+    position: absolute
+    bottom: 0
+    left: 45%
+  a
+    color: black
+    float: left
+    padding: 8px 16px
+    text-decoration: none
+    padding: 5px 
+
+.footer
+  display: flex 
+  flex-wrap: wrap 
+  flex-direction: row 
+  justify-content: flex-start 
+  align-items: stretch
+  padding: 40px
+  padding-bottom: 70px
+  @media only screen and (max-width: $tablet)
+    flex-wrap: nowrap
+  @media only screen and (max-width: $phone)
+    flex-direction: column
+  .cmpny-info
+    flex-basis: 30%
+    order: 1
+    position: relative
+    text-align: left
+    box-sizing: border-box
+    padding: 0 60px
+    @media only screen and (max-width: $tablet)
+      flex-basis: 40%
+      padding: 0
+    .social-btns
+      list-style: none
+      padding: 0
+      li
+        display: inline
+        margin: 10px
+        .social-btn > i
+          color: $primary-color
+    .phone-number
+      font-family: $header-font
+      font-size: 24px
+      font-weight: bold
+      color: #424242
+      margin: 10px
+    .address
+      font-family: $header-font
+      font-size: 14px
+      color: #424242
+      @media only screen and (max-width: $tablet)
+        margin: 15px 0
+    .email
+      font-family:  $primary-font
+      font-size: 14px
+      color: $primary-color
+    .address
+      font-family: $primary-font
+      font-size: 14px
+      color: #424242
+  .footer-nav
+    flex-basis: 70%
+    order: 2
+    position: relative
+    display: flex
+    @media only screen and (max-width: $tablet)
+      display: block
+      column-count: 2
+    @media only screen and (max-width: $phone)
+      display: block
+      width: 100%
+      column-count: 1
+      margin-top: 10px
+    ul
+      list-style: none
+      margin: 0 20px
+      @media only screen and (max-width: $phone)
+        margin: 20px 0  
+        padding: 0  
+      .nav-sec-header
+        font-family: $header-font
+        font-size: 14px
+        color: #000000
+        @media only screen and (max-width: $phone)
+          display: flex
+          justify-content: space-between
+        i
+          display: none
+          @media only screen and (max-width: $phone)
+            display: block
+            font-size: 18px
+      li
+        margin: 10px 0
+        @media only screen and (max-width: $phone)
+          display: none
+          margin: 0
+        .nav-item
+          color: $primary-color
+          font-family: $primary-font
+          font-size: 14px
+
+@media only screen and (max-width: $tablet)
+  .mobile-menu
+    min-width: 100%
+    min-height: 100vh
+    position: relative
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    align-items: flex-start
+    background: #ffffff
+    box-sizing: border-box
+    .header-navigation
+      display: flex
+      flex-direction: column
+    .right-section
+      display: flex
+      flex-direction: column
+      align-items: flex-start
+      margin-left: 0
+      .compare, .cabinet
+        display: block
+        margin: 10px 0
+      .cabinet  
+        color: $primary-color
+        border: none
+        i
+          display: none
+      .company-phone
+        .number
+          margin-left: 0
+          margin-right: 30px
+          display: block
+        .call-btn
+          min-width: 38px
+          min-height: 38px
+          padding: 2px
+          background: #893b67
+          background-image: url(/assets/img/call-us-btn.png)
+          border-radius: 50%
+          background-position: center
+          background-size: 50%
+          background-repeat: no-repeat
+          background-clip: content-box
+          border: 6px solid #893b67
+          border-style: double
+      .mobile-nav-btn-close
+        display: block
+        position: absolute
+        top: 20px
+        right: 20px
+        background: transparent
+        border: none
+        padding: 0
+        margin-left: 30px
+        i
+          font-size: 28px
+          color: $primary-color
+      .mobile-nav-btn-open
+        display: none !important
